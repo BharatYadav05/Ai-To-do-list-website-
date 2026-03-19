@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ByTek</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- Header -->
+    <header>
+      <h1>ByTek</h1>
+      <button id="themeBtn" class="icon-btn">🌙</button>
+    </header>
+
+    <!-- Input -->
+    <div class="input-card">
+      <input type="text" id="taskInput" placeholder="What needs to be done?" />
+      <button id="addTaskBtn">Add</button>
+    </div>
+
+    <!-- Filters -->
+    <div class="filters">
+      <button data-filter="all" class="active">All</button>
+      <button data-filter="pending">Pending</button>
+      <button data-filter="completed">Done</button>
+    </div>
+
+    <!-- Task List -->
+    <ul id="taskList"></ul>
+
+    <!-- Footer -->
+    <footer>
+      <span id="taskCount"></span>
+      <button id="clearCompleted" class="text-btn">Clear completed</button>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

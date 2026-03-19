@@ -1,0 +1,152 @@
+:root {
+  --bg: linear-gradient(135deg, #f5f7fa, #e4ecf3);
+  --card: rgba(255, 255, 255, 0.7);
+  --text: #111;
+  --primary: #6366f1;
+  --border: rgba(0,0,0,0.05);
+}
+
+body.dark {
+  --bg: linear-gradient(135deg, #0f172a, #1e293b);
+  --card: rgba(30, 41, 59, 0.7);
+  --text: #f1f5f9;
+  --border: rgba(255,255,255,0.05);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: 0.3s ease;
+}
+
+/* App Container */
+.app {
+  width: 380px;
+  backdrop-filter: blur(20px);
+  background: var(--card);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+/* Buttons */
+button {
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 8px 12px;
+  transition: 0.2s;
+}
+
+.icon-btn {
+  background: transparent;
+  font-size: 1.2rem;
+}
+
+.text-btn {
+  background: transparent;
+  color: var(--primary);
+}
+
+/* Input Card */
+.input-card {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  outline: none;
+}
+
+#addTaskBtn {
+  background: var(--primary);
+  color: white;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.filters button {
+  flex: 1;
+  background: transparent;
+  border: 1px solid var(--border);
+}
+
+.filters .active {
+  background: var(--primary);
+  color: white;
+}
+
+/* Task List */
+ul {
+  list-style: none;
+  padding: 0;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+/* Task Item */
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 6px 0;
+  border-radius: 12px;
+  transition: 0.2s;
+}
+
+li:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+.task-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+/* Delete Button */
+.delete-btn {
+  background: transparent;
+  font-size: 1rem;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
